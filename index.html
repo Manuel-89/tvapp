@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>TV app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="tvapp">
+        <div class="tv">
+        <div class="screen">
+            <div v-if="turnOn == false" class="screenDisplay">
+            <div v-for="(channels, index) in channels">
+             <img src="channels"  v-show="visible == index">
+            </div>
+            <div v-else class="turnOff">
+            </div>
+            
+            
+            <div class="powerButton">
+            <button type="button" class="powerOnOrOff" @click="powerOnOrOff">Power</button>
+            </div>
+            <div class="selectPrevious">
+            <button type="button" class="previous" @click="previous">Previous</button>  
+            </div>
+            
+            <div class="selectNext">
+            <button type="button" class="next" @click="next">Next</button>
+            </div>
+            
+        </div>
+    </div>
+        
+        </div>
+
+</div>
+
+
+
+  <script src="vue.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
